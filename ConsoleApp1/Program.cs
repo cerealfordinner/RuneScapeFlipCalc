@@ -8,6 +8,8 @@ static void flipCalc()
     string sellPrice;
     string geLimit;
     bool result;
+    char loop = 'Y';
+
 
     string askString(string text)
     {
@@ -41,6 +43,9 @@ static void flipCalc()
         } while (!result);
 
         Console.WriteLine($"If you flip {geLimit} {item} for the provided prices you will make {(Convert.ToInt32(sellPrice) - Convert.ToInt32(buyPrice)) * Convert.ToInt32(geLimit)})");
+        Console.Write("\n \nPlease enter to continue");
+        Console.ReadLine();
+        Console.Clear();
     } while (true);
 }
 
