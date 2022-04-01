@@ -4,11 +4,11 @@ First C# console app that simply allows you to calculate how much you'll make of
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+Clone the repo and use `dotnet run` which will handle the `dotnet restore` and `dotnet build`
 
 ### Prerequisites
 
-Clone the repo and use `dotnet run` which will handle the `dotnet restore` and `dotnet build`
+The only package you'll need to install as of right now is listed below (along with the .NET SDK of course)
 
 ```
 Figgle
