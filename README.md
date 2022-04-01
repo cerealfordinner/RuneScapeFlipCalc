@@ -8,7 +8,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-The only package you'll need to install as of right now is listed below (along with the .NET SDK of course)
+Clone the repo and use `dotnet run` which will handle the `dotnet restore` and `dotnet build`
 
 ```
 Figgle
