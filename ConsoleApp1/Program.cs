@@ -21,7 +21,7 @@ static void flipCalc()
     {
         Console.Clear();
         Console.WriteLine(
-    FiggleFonts.Standard.Render("RuneScape Flip Calc"));
+        FiggleFonts.Standard.Render("RuneScape Flip Calc"));
 
         item = ask.AskString("Please provide the item you wish to flip:");
 
@@ -50,22 +50,15 @@ static void flipCalc()
             geTax = false;
         }
 
-        double intBuy = int.Parse(buyPrice);
-        double intSell = int.Parse(sellPrice);
+        int intBuy = int.Parse(buyPrice);
+        int intSell = int.Parse(sellPrice);
         int limit = int.Parse(geLimit);
 
 
+        Flip flip = new Flip(item, intBuy, intSell, limit, geTax);
 
-        if (geTax == true)
-        {
-            margin = ((int)(intSell * 0.99) - (int)intBuy);
-        } else
-        {
-            margin = ((int)(intSell) - (int)intBuy);
-        }
+        Console.WriteLine(Flip.FlipCalc(flip));
 
-        Console.WriteLine($"\nIf you flip {geLimit} {item} for the provided prices you will make {margin * limit}");
-        
         Console.Write("\n \nRerun?(Y/n)");
     } while ((Console.ReadKey().Key != ConsoleKey.N));
 }
